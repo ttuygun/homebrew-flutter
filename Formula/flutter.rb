@@ -16,18 +16,6 @@ class Flutter < Formula
   bottle :unneeded
 
   def install
-    current_ip = `curl http://api.db-ip.com/v2/free/self/ipAddress`
-    ip_address_url = 'http://api.db-ip.com/v2/free/'.concat(current_ip)
-    ip_address = `curl #{ip_address_url}`
-    ip_address_hash = JSON.parse ip_address
-    country_code = ip_address_hash["countryCode"]
-
-    if (country_code == "CN")
-      opoo "You are located in China"
-      ENV["PUB_HOSTED_URL"] = "https://pub.flutter-io.cn"
-      ENV["FLUTTER_STORAGE_BASE_URL"] = "https://storage.flutter-io.cn"
-    end
-
     system "./bin/flutter"
     allfiles = File.join(buildpath, "**", "{*,.*}")
     mv Dir.glob(allfiles), Dir.glob(prefix), :force => true
