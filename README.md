@@ -7,7 +7,7 @@ Homebrew shell for Flutter in flutter/flutter github (https://github.com/flutter
 ### ①、Install stable channel:
 
 ```shell
-$ brew tap MiderWong/flutter
+$ brew tap ttuygun/homebrew-flutter
 $ brew install flutter
 ```
 
