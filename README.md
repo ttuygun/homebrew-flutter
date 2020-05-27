@@ -12,9 +12,10 @@ $ brew install flutter
 ```
 
 ### ②、Install devel channel:
+This is master branch. If you use latest flutter, use it.
 
 ```shell
-$ brew tap MiderWong/flutter
+$ brew tap ttuygun/homebrew-flutter
 $ brew install --devel flutter
 ```
 
